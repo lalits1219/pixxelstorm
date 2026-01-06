@@ -5,8 +5,9 @@ backend:
   name: github
   repo: lalits1219/pixxelstorm
   branch: main
-  auth_endpoint: https://github.com/login/oauth/authorize
-
+  auth_type: implicit
+  client_id: Ov23liCkDu9J8sjfHN1I
+  
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
