@@ -1,0 +1,29 @@
+site_url: https://comforting-heliotrope-228ea5.netlify.app
+display_url: https://comforting-heliotrope-228ea5.netlify.app
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "airdrops"
+    label: "Airdrops"
+    folder: "src/data/airdrops"
+    create: true
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Status", name: "status", widget: "select", options: ["LIVE", "UPCOMING", "ENDED"] }
+      - { label: "Description", name: "description", widget: "text" }
+
+  - name: "news"
+    label: "News"
+    folder: "src/data/news"
+    create: true
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
