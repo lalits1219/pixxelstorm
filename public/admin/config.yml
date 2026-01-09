@@ -1,13 +1,10 @@
-site_url: https://pixxelstorm.pages.dev
-display_url: https://pixxelstorm.pages.dev
+site_url: https://comforting-heliotrope-228ea5.netlify.app
+display_url: https://comforting-heliotrope-228ea5.netlify.app
 
 backend:
-  name: github
-  repo: lalits1219/pixxelstorm
+  name: git-gateway
   branch: main
-  auth_type: implicit
-  client_id: Ov23liCkDu9J8sjfHN1I
-  
+
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
