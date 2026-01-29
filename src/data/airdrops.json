@@ -1,0 +1,40 @@
+[
+  {
+    "title": "LayerX Network",
+    "status": "LIVE",
+    "description": "Complete simple tasks and earn early rewards"
+  },
+
+  {
+    "title": "Nova Chain",
+    "status": "UPCOMING",
+    "description": "Testnet based airdrop"
+  },
+
+
+{
+  "title": "Zetarium",
+  "status": "LIVE",
+  "overview": [
+    "Web3 ecosystem",
+    "DeFi + SocialFi",
+    "Prediction markets"
+  ],
+  "steps": [
+    {
+      "title": "Login",
+      "text": "Login with X (Twitter)"
+    },
+    {
+      "title": "Wallet",
+      "text": "Connect MetaMask"
+    },
+    {
+      "title": "Tasks",
+      "text": "Complete all social tasks"
+    }
+  ]
+}
+
+
+]
