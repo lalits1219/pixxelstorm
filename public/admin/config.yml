@@ -1,26 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
 collections:
   - name: "airdrops"
     label: "Airdrops"
     folder: "src/Data/airdrops"
     create: true
     format: "json"
-
     fields:
-      - { label: "Project Name", name: "title", widget: "string" }
-
-      - label: "Status"
-        name: "status"
-        widget: "select"
-        options: ["LIVE", "UPCOMING", "ENDED"]
-
-      - label: "Overview (Points)"
-        name: "overview"
-        widget: "list"
-        field: { label: "Point", name: "point", widget: "string" }
-
-      - label: "Step by Step Guide"
-        name: "steps"
-        widget: "list"
-        fields:
-          - { label: "Step Title", name: "title", widget: "string" }
-          - { label: "Instruction", name: "text", widget: "text" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Status", name: "status", widget: "select", options: ["LIVE","UPCOMING","ENDED"] }
+      - { label: "Description", name: "description", widget: "markdown" }

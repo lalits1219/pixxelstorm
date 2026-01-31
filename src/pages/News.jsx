@@ -1,23 +1,43 @@
-const files = import.meta.glob("../data/news/*.json", {
-  eager: true
-})
-
-export default function News() {
-  const data = Object.values(files)
-
+function News() {
   return (
-    <div className="container">
-      <h1>Crypto News</h1>
+    <div style={{ padding: "40px", maxWidth: "900px", margin: "0 auto" }}>
+      <h1 style={{ fontSize: "32px", marginBottom: "16px" }}>
+        Crypto News
+      </h1>
 
-      <div className="grid">
-        {data.map((item, index) => (
-          <div className="card" key={index}>
-            <h3>{item.title}</h3>
-            <p>{item.summary}</p>
-          </div>
-        ))}
+      <p style={{ fontSize: "16px", opacity: 0.75, marginBottom: "32px" }}>
+        Curated crypto news and important updates coming soon.
+      </p>
+
+      <div
+        style={{
+          padding: "32px",
+          borderRadius: "16px",
+          background: "linear-gradient(180deg, #0b1220, #060b16)",
+          border: "1px solid #1f2937",
+        }}
+      >
+        <h3 style={{ marginBottom: "12px" }}>
+          🚧 News section is being prepared
+        </h3>
+
+        <p style={{ fontSize: "14px", opacity: 0.7 }}>
+          We’re working on bringing you verified crypto news, project updates,
+          and ecosystem insights.
+          <br />
+          <br />
+          For now, follow us on X to stay updated.
+        </p>
+
+        <button
+          style={{ marginTop: "20px" }}
+          onClick={() => window.open("https://x.com/pixxelstorm", "_blank")}
+        >
+          Follow on X
+        </button>
       </div>
     </div>
-  )
+  );
 }
 
+export default News;

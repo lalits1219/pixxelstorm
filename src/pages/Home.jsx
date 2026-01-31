@@ -1,66 +1,59 @@
-import { useState } from "react"
+import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
-export default function Home() {
-  const [showText, setShowText] = useState(false)
+function Home() {
+  const navigate = useNavigate(); // ✅ REQUIRED
 
   return (
-    <div className="container" style={{ textAlign: "center" }}>
-      
-      <div
-        className="hero-logo"
-        style={{ cursor: "pointer" }}
-        onClick={() => setShowText(!showText)}
-      >
-        {!showText ? (
+    <div className="home">
+      <section className="hero">
+
+        {/* LOGO */}
+        <div className="logo-wrapper">
           <img
             src="/pixxelstorm.png"
             alt="PixxelStorm"
-            style={{
-              width: "180px",
-              height: "180px",
-              borderRadius: "50%",
-              objectFit: "cover",
-              border: "2px solid rgba(56,189,248,0.4)"
-            }}
+            className="hero-logo"
           />
-        ) : (
-          <svg
-            width="260"
-            height="260"
-            viewBox="0 0 260 260"
-            className="rotating-svg"
+        </div>
+
+        {/* TITLE */}
+        <h1 className="hero-title">PixxelStorm</h1>
+
+        {/* SUBTITLE */}
+        <p className="hero-subtitle">
+          A community driven crypto hub for Airdrops, Alpha & News.
+        </p>
+
+        {/* CTA BUTTONS */}
+        <div className="hero-actions">
+          <button
+            className="hero-btn primary"
+            onClick={() =>
+              window.open("https://x.com/pixxelstorm", "_blank")
+            }
           >
-            <defs>
-              <path
-                id="circlePath"
-                d="
-                  M 130, 130
-                  m -90, 0
-                  a 90,90 0 1,1 180,0
-                  a 90,90 0 1,1 -180,0
-                "
-              />
-            </defs>
+            🚀 Join Community
+          </button>
 
-           <text
-  fill="#7dd3fc"
-  fontSize="13"
-  letterSpacing="4"
-  style={{ textTransform: "uppercase" }}
->
+          <button
+            className="hero-btn outline"
+            onClick={() => navigate("/airdrops")}
+          >
+            ⚡ View Airdrops
+          </button>
 
-              <textPath href="#circlePath">
-                PIXXELSTORM • CRYPTO • AI • COMMUNITY •
-              </textPath>
-            </text>
-          </svg>
-        )}
-      </div>
+          <button
+            className="hero-btn outline"
+            onClick={() => navigate("/news")}
+          >
+            📰 Crypto News
+          </button>
+        </div>
 
-      <p style={{ marginTop: "20px", opacity: 0.7 }}>
-        Click on PixxelStorm
-      </p>
-
+      </section>
     </div>
-  )
+  );
 }
+
+export default Home;

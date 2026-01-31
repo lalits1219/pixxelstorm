@@ -1,20 +1,25 @@
-import { Routes, Route } from "react-router-dom"
-import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import Airdrops from "./pages/Airdrops"
-import News from "./pages/News"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Airdrops from "./pages/Airdrops";
+import News from "./pages/News";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
-    <div style={{ background: "#0B0F1A", color: "white", minHeight: "100vh" }}>
-      <Navbar />
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/airdrops" element={<Airdrops />} />
-        <Route path="/news" element={<News />} />
+        {/* Layout Route */}
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/airdrops" element={<Airdrops />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/admin" element={<Admin />} />
+        </Route>
       </Routes>
-    </div>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
